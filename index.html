@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="./css/css.css">
+</head>
+
+<header>
+    <div>
+        <h1>Lista de Tarefas</h1>
+    </div>
+
+</header>
+
+<body>
+
+
+    <main>
+        <div class="conteudo">
+            <div class="topo">
+                <input type="text" id="inputNovaTarefa" placeholder="Adicione uma nova tarefa">
+
+                <button type="submit" id="btnAddTarefa">+</button>
+                </button>
+            </div>
+
+            <ul id="listaTarefas">
+
+            </ul>
+        </div>
+
+        <div id="janelaEdicao">
+            <button id="janelaEdicaoBtnFechar">
+                <i class="fa fa-remove">x</i>
+            </button>
+
+            <h2 id="idTarefaEdicao">#0121</h2>
+
+            <hr>
+
+            <form>
+                <div class="frm-linha">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="inputTarefaNomeEdicao">
+                </div>
+                <div class="frm-linha">
+                    <button id="btnAtualizarTarefa">Salvar</button>
+                </div>   
+
+            </form>
+        </div>
+
+        <div id="janelaEdicaoFundo"></div>
+    </main>
+
+
+   <!--  
+    <h1>Lista de Tarefas</h1>
+    <form id="form-atividade">
+        <input type="text" id="nome-tarefa" required placeholder="Digite a tarefa">
+        <button type="submit" id="btnAddTarefa">Adicionar</button>
+    </form>
+    <ul id="listaTarefa">
+        <li>
+            <span class="textoTarefa">
+                Tarefa1
+            </span>
+            <div>
+                 <button class="btnAcao"> 
+                    <i class="fa fa-gencil"></i>
+                </button> 
+            </div>
+        </li>
+    </ul>-->
+    
+    <footer>
+        <h5>&copy;  Sérgio Adriano</h5>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header, h1{
+    margin-left: 15px;
+
+}
+
+header{
+    margin: 30px 0;
+    background-color: #133337;
+    padding: 6px 0;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 16px solid #61AE71;
+    font-style: italic;
+}
+
+body{
+    background-color: #133337;
+    color: #fff;
+}
+
+.conteudo{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #2b2a2a;
+    border: 1px solid #61AE71;
+    padding: 55px;
+    border-radius: 12px;
+}
+
+.topo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.topo input{
+    width: 290px;
+    height: 45px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #61AE71;
+    outline: none;
+    
+    background-color: rgb(215, 248, 237);
+    
+}
+
+.topo ::placeholder{
+    font-size: 0.8rem;
+    color: #3f8d4e;
+}
+
+.topo button{
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 12px;
+    border: 2px solid #61AE71;
+    background-color: rgb(215, 248, 237);
+    color: #3f8d4e;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.topo button:hover{
+    background: #115B56;
+    color: #fff;
+    cursor: pointer;
+}
+
+#listaTarefas{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+#listaTarefas li{
+    padding: 15px;
+    background: rgb(215, 248, 237);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    border: 2px solid #61AE71;
+    color: #3f8d4e;
+}
+
+.btnAcao{
+    border-radius: 20px;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    background-color: rgb(215, 248, 237);
+    border: 1px solid #61AE71;
+    color: #3f8d4e;
+    cursor: pointer;
+    outline: none;
+
+}
+
+.btnAcao:hover{
+    background-color: #115B56;
+    font-size: 1rem;
+    color: #fff;
+    
+}
+
+.textoTarefa{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 190px;
+    white-space: nowrap;
+}
+
+#janelaEdicao{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #2b2a2a;
+    border: 1px solid #61AE71;
+    width: 415px;
+    border-radius: 12px;
+    z-index: 200;
+    display: none;
+
+}
+
+#janelaEdicao.abrir{
+    display: block !important;
+}
+
+#janelaEdicaoFundo{
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: 100;
+    right: 0;
+    display: none;
+}
+
+#janelaEdicaoFundo.abrir{
+    display: block !important;
+}
+
+#janelaEdicaoBtnFechar{
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(215, 248, 237);
+    border: 1px solid #61AE71;
+    color: #3f8d4e;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    
+}
+
+#janelaEdicaoBtnFechar:hover{
+    background-color: #115B56;
+    font-size: 1rem;
+    color: #fff;
+    
+}
+
+form{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.frm-linha{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+
+.frm-linha label{
+    margin-bottom: 7px;
+}
+
+.frm-linha input{
+    padding: 25px;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgb(215, 248, 237);
+    border: 1px solid #61AE71;
+    color: #3f8d4e;
+    font-size: 1rem;
+}
+
+.frm-linha button{
+    background-color: rgb(215, 248, 237);
+    border-radius: 10px;
+    border: 1px solid #61AE71;
+    color: #3f8d4e;
+    padding: 5px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+#btnAtualizarTarefa:hover{
+    background-color: #115B56;
+    font-size: 1rem;
+    color: #fff;
+    
+}
+
+
+footer{
+    background-color: #115B56;
+    color: aliceblue;
+}
+
+footer, h5{
+    text-align: center;
+}
