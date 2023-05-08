@@ -30,6 +30,10 @@ btnAddTarefa.addEventListener('click', (e) =>{
         addTarefa(tarefa);
 });
 
+btnSublinhar.addEventListener("click", (e) => {
+    sublinhar();
+});  
+
 btnAtualizarTarefa.addEventListener('click', (e)=>{
     e.preventDefault();
 
@@ -50,6 +54,12 @@ btnAtualizarTarefa.addEventListener('click', (e)=>{
         alert('Elemento HTML não encontrado.');
     }
 
+    /*if (!tarefaAtual.classList.contains("sublinhado")) {
+        tarefaAtual.classList.add("sublinhado");
+    } else {
+        tarefaAtual.classList.remove("sublinhado");
+    } */
+
 });
 
 function gerarId(){
@@ -65,7 +75,6 @@ function addTarefa(tarefa){
 function criarTagLi(tarefa){
     let li = document.createElement('li');
     li.id = tarefa.id;
-
 
     let span = document.createElement('span');
     span.classList.add('textoTarefa');
@@ -83,8 +92,15 @@ function criarTagLi(tarefa){
     btnExcluir.innerHTML = '<i class="fa fa-trash">d</i>';
     btnExcluir.setAttribute('onclick', 'excluir('+tarefa.id+')');
 
+    let btnSublinhar = document.createElement('button');
+    btnSublinhar.classList.add('btnAcao');
+    btnSublinhar.innerHTML = '<i class="fa fa-trash">s</i>';
+    btnSublinhar.setAttribute('onclick', 'sublinhar('+tarefa.id+')');
+    
+
     div.appendChild(btnEditar);
     div.appendChild(btnExcluir);
+    div.appendChild(btnSublinhar);
 
     li.appendChild(span);
     li.appendChild(div);
@@ -114,6 +130,23 @@ function excluir(idTarefa){
         alert('Elemento HTML não encontrado.');
     }
 }
+
+function sublinhar(idTarefa){
+    let subs = document.getElementById(idTarefa);
+        if (!subs.classList.contains('sublinhado')) {
+            subs.classList.add('sublinhado');
+        } else {
+            subs.classList.remove('sublinhado');
+        }
+}
+
+/*itemTarefa.addEventListener("click", () => {
+    if (!itemTarefa.classList.contains("completa")) {
+      itemTarefa.classList.add("completa");
+    } else {
+      itemTarefa.classList.remove("completa");
+    }
+  });*/
 
 function alternarJanelaEdicao(){
     janelaEdicao.classList.toggle('abrir');

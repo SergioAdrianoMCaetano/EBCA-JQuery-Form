@@ -229,6 +229,10 @@ form{
     
 }
 
+.sublinhado {
+    text-decoration: line-through;
+  }
+
 
 footer{
     background-color: #115B56;
